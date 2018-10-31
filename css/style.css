@@ -1,0 +1,49 @@
+body {
+    background-color: black;
+}
+
+ h1{
+     color: #FFFF;
+ }
+
+ a:hover { 
+    background-color: rgb(132, 140, 255);
+}
+
+img {
+    max-width: 100%;
+    }
+
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flex-container > div {
+    width: 600px;
+    margin: 5px;
+    text-align: center;
+    background-color: rgb(208, 230, 236);
+    border-radius: 5%;
+   }
+
+  button {
+
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+background-color: orange);
+border-radius: 50%;
+border-color: black;
+transition-duration: 0.4s;
+    cursor: pointer;
+    color: blue;
+  }
+
+  button:hover {
+    background-color: burlywood; /* Green */
+    color: black;
+}
