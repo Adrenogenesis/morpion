@@ -1,3 +1,5 @@
+// Un test pour puissance 4
+
 const gameArea = document.getElementById("game-area"); // le seul élément du DOM dont on a besoin
 // c'est l'élément parent de nos cases -> on récupérera l'enfant au clique.
 
@@ -23,7 +25,6 @@ gameArea.addEventListener("click", function(event) {
     clickedCellChordY = parseInt(clickedCellName[4]); // récupère le 4eme caractère dans l'ID
     console.log("X : " + clickedCellChordX + ", Y : " + clickedCellChordY);
     console.log("clickedCell : " + clickedCellName);
-
 
     cellsStatus[clickedCellChordX-1][clickedCellChordY-1] = "joueur" + joueurEnCours; // modifie le tableau pour stocker la donnée dans la case cliquée
     partie();
@@ -65,34 +66,33 @@ function termine() {
     }
 }
 
-    function victoire() {
+function victoire() {
 
-        if (cellsStatus[0][0] === "joueur" + 0 !== "vide" && cellsStatus[0][1] === "joueur" + 0 && cellsStatus[0][2] === "joueur" + 0
+    if (cellsStatus[0][0] === "joueur" + 0 !== "vide" && cellsStatus[0][1] === "joueur" + 0 && cellsStatus[0][2] === "joueur" + 0
         || cellsStatus[1][0] === "joueur" + 0 && cellsStatus[1][1] === "joueur" + 0 && cellsStatus[1][2] === "joueur" + 0
         || cellsStatus[2][0] === "joueur" + 0 && cellsStatus[2][1] === "joueur" + 0 && cellsStatus[2][2] === "joueur" + 0 ||
 
-            cellsStatus[0][0] === "joueur" + 0 !== "vide" && cellsStatus[1][0] === "joueur" + 0 && cellsStatus[2][0] === "joueur" + 0
-            || cellsStatus[0][1] === "joueur" + 0 && cellsStatus[1][1] === "joueur" + 0 && cellsStatus[2][1] === "joueur" + 0
-            || cellsStatus[0][2] === "joueur" + 0 && cellsStatus[1][2] === "joueur" + 0 && cellsStatus[2][2] === "joueur" + 0
+        cellsStatus[0][0] === "joueur" + 0 !== "vide" && cellsStatus[1][0] === "joueur" + 0 && cellsStatus[2][0] === "joueur" + 0
+        || cellsStatus[0][1] === "joueur" + 0 && cellsStatus[1][1] === "joueur" + 0 && cellsStatus[2][1] === "joueur" + 0
+        || cellsStatus[0][2] === "joueur" + 0 && cellsStatus[1][2] === "joueur" + 0 && cellsStatus[2][2] === "joueur" + 0
 
-            ||cellsStatus[0][0] === "joueur" + 0 !== "vide" && cellsStatus[1][1] === "joueur" + 0 && cellsStatus[2][2] === "joueur" + 0
-            || cellsStatus[0][2] === "joueur" + 0 && cellsStatus[1][1] === "joueur" + 0 && cellsStatus[2][0] === "joueur" + 0
+        ||cellsStatus[0][0] === "joueur" + 0 !== "vide" && cellsStatus[1][1] === "joueur" + 0 && cellsStatus[2][2] === "joueur" + 0
+        || cellsStatus[0][2] === "joueur" + 0 && cellsStatus[1][1] === "joueur" + 0 && cellsStatus[2][0] === "joueur" + 0
         ) {
            // console.log("gagné !");
             alert ("Gagné !");
             location.reload();
         }
-        else if (cellsStatus[0][0] === "joueur" + 1 && cellsStatus[0][1] === "joueur" + 1 && cellsStatus[0][2] === "joueur" + 1
-            || cellsStatus[1][0] === "joueur" + 1 && cellsStatus[1][1] === "joueur" + 1 && cellsStatus[1][2] === "joueur" + 1
-            || cellsStatus[2][0] === "joueur" + 1 && cellsStatus[2][1] === "joueur" + 1 && cellsStatus[2][2] === "joueur" + 1
+    else if (cellsStatus[0][0] === "joueur" + 1 && cellsStatus[0][1] === "joueur" + 1 && cellsStatus[0][2] === "joueur" + 1
+        || cellsStatus[1][0] === "joueur" + 1 && cellsStatus[1][1] === "joueur" + 1 && cellsStatus[1][2] === "joueur" + 1
+        || cellsStatus[2][0] === "joueur" + 1 && cellsStatus[2][1] === "joueur" + 1 && cellsStatus[2][2] === "joueur" + 1
 
         || cellsStatus[0][0] === "joueur" + 1 !== "vide" && cellsStatus[1][0] === "joueur" + 1 && cellsStatus[2][0] === "joueur" + 1
-            || cellsStatus[0][1] === "joueur" + 1 && cellsStatus[1][1] === "joueur" + 1 && cellsStatus[2][1] === "joueur" + 1
-            || cellsStatus[0][2] === "joueur" + 1 && cellsStatus[1][2] === "joueur" + 1 && cellsStatus[2][2] === "joueur" + 1
+        || cellsStatus[0][1] === "joueur" + 1 && cellsStatus[1][1] === "joueur" + 1 && cellsStatus[2][1] === "joueur" + 1
+        || cellsStatus[0][2] === "joueur" + 1 && cellsStatus[1][2] === "joueur" + 1 && cellsStatus[2][2] === "joueur" + 1
 
-            ||cellsStatus[0][0] === "joueur" + 1 !== "vide" && cellsStatus[1][1] === "joueur" + 1 && cellsStatus[2][2] === "joueur" + 1
-            || cellsStatus[0][2] === "joueur" + 1 && cellsStatus[1][1] === "joueur" + 1 && cellsStatus[2][0] === "joueur" + 1
-
+        ||cellsStatus[0][0] === "joueur" + 1 !== "vide" && cellsStatus[1][1] === "joueur" + 1 && cellsStatus[2][2] === "joueur" + 1
+        || cellsStatus[0][2] === "joueur" + 1 && cellsStatus[1][1] === "joueur" + 1 && cellsStatus[2][0] === "joueur" + 1
         ) {
            // console.log("perdu !");
             alert ("Perdu !");
