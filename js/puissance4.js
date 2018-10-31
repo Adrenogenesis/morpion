@@ -66,7 +66,7 @@ function termine() {
 }
 
     function victoire() {
-    
+
         if (cellsStatus[0][0] === "joueur" + 0 !== "vide" && cellsStatus[0][1] === "joueur" + 0 && cellsStatus[0][2] === "joueur" + 0
         || cellsStatus[1][0] === "joueur" + 0 && cellsStatus[1][1] === "joueur" + 0 && cellsStatus[1][2] === "joueur" + 0
         || cellsStatus[2][0] === "joueur" + 0 && cellsStatus[2][1] === "joueur" + 0 && cellsStatus[2][2] === "joueur" + 0 ||
@@ -78,7 +78,9 @@ function termine() {
             ||cellsStatus[0][0] === "joueur" + 0 !== "vide" && cellsStatus[1][1] === "joueur" + 0 && cellsStatus[2][2] === "joueur" + 0
             || cellsStatus[0][2] === "joueur" + 0 && cellsStatus[1][1] === "joueur" + 0 && cellsStatus[2][0] === "joueur" + 0
         ) {
-            console.log("gagné !");
+           // console.log("gagné !");
+            alert ("Gagné !");
+            location.reload();
         }
         else if (cellsStatus[0][0] === "joueur" + 1 && cellsStatus[0][1] === "joueur" + 1 && cellsStatus[0][2] === "joueur" + 1
             || cellsStatus[1][0] === "joueur" + 1 && cellsStatus[1][1] === "joueur" + 1 && cellsStatus[1][2] === "joueur" + 1
@@ -92,7 +94,9 @@ function termine() {
             || cellsStatus[0][2] === "joueur" + 1 && cellsStatus[1][1] === "joueur" + 1 && cellsStatus[2][0] === "joueur" + 1
 
         ) {
-            console.log("perdu !");
+           // console.log("perdu !");
+            alert ("Perdu !");
+            location.reload();
         }
         else {
             console.log("rejouer !")
